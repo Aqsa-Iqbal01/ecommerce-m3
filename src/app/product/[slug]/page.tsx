@@ -6,7 +6,7 @@ import { fullProduct } from "@/app/interface";
 import { client } from "@/app/lib/sanity";
 import { Button } from "@/components/ui/button";
 import { Star, Truck } from "lucide-react";
-import { stringifyCookie } from "next/dist/compiled/@edge-runtime/cookies";
+
 
 
 async function getData(slug : string) {
