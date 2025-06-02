@@ -1,7 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
-import { client, urlFor } from '../lib/sanity'
+
 import Link from 'next/link'
+import { urlFor } from '@/sanity/lib/image'
+import { client } from '@/sanity/lib/client'
 
 async function getData() {
     const query = "*[_type == 'heroImage'] [0]"

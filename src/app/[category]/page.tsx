@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { simplifiedProduct } from "../interface";
-import { client } from "../lib/sanity";
+
 import Image from "next/image";
+import { client } from "@/sanity/lib/client";
+
+
+
 async function getData(category: string) {
  const query = `*[_type == "product" && category->name == "${category}"] {
  _id,

@@ -1,9 +1,10 @@
 
-import { client } from '../lib/sanity';
+
 import { simplifiedProduct } from '../interface';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import { client } from '@/sanity/lib/client';
 
 async function getData(){
     const query = `*[_type == "product"] [0...4] | order(_createAt desc) {
@@ -30,7 +31,7 @@ const data = await client.fetch(query);
    <div className='mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8'>
    <div className='flex justify-between items-center'>
    <h2 className='text-2xl font-bold tracking-tight text-gray-900'>Our Newest Products</h2>
-   <Link className='text-primary flex items-center gap-x-1' href="/all">
+   <Link className='text-primary flex items-center gap-x-1' href="/">
    See All <span><ArrowRight/></span>
    </Link>
    </div>
